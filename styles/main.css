@@ -1,0 +1,334 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  width: 100%;
+  height: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: none;
+}
+
+/* Font face */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Regular.woff") format("woff");
+  src: url("../assets/fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("..//assets/fonts/Roboto-Bold.woff") format("woff");
+  src: url("../assets/fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: hsl(234, 29%, 20%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  line-height: 1.5;
+}
+@media screen and (min-width: 26.5rem) {
+  body {
+    background-color: hsl(234, 29%, 20%);
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  max-width: 26.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 26.5rem) {
+  main {
+    border-radius: 1.25rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  main {
+    width: 100%;
+    flex-direction: row;
+    max-width: fit-content;
+    padding: 1.25rem;
+  }
+}
+
+h1,
+h2 {
+  font-size: clamp(36px, 5vw, 48px);
+}
+
+button {
+  border-width: 0;
+  padding: 1.25rem;
+  border-radius: 0.6rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  transition: transform 0.5s ease-in-out;
+}
+@media screen and (min-width: 64rem) {
+  button {
+    cursor: pointer;
+  }
+}
+
+/* newsletter styles */
+.newsletter__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 64rem) {
+  .newsletter__wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.newsletter__wrapper--hide {
+  display: none;
+}
+
+@media screen and (min-width: 26.5rem) {
+  .newsletter__image-mobile {
+    border-radius: 1.25rem;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .newsletter__image-mobile {
+    display: none;
+  }
+}
+
+.newsletter__image-desktop {
+  display: none;
+}
+@media screen and (min-width: 64rem) {
+  .newsletter__image-desktop {
+    display: block;
+    border-radius: 1.25rem;
+    width: 100%;
+    max-width: 400px;
+    order: 2;
+  }
+}
+
+.newsletter__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+.newsletter__content > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+@media screen and (min-width: 64rem) {
+  .newsletter__content {
+    width: 28rem;
+    margin-right: 1.25rem;
+    text-wrap-style: pretty;
+  }
+}
+
+.newsletter__content ul {
+  margin-bottom: 1.25rem;
+}
+
+.newsletter__content ul li {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.newsletter__subscribe-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.newsletter__subscribe-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.email-input {
+  border: 1px solid hsl(0, 0%, 58%);
+  padding: 1.25rem;
+  border-radius: 0.6rem;
+}
+.email-input--show {
+  border: 1px solid hsl(4, 100%, 67%);
+  padding: 1.25rem;
+  border-radius: 0.6rem;
+}
+
+.email-error-message {
+  display: none;
+}
+.email-error-message--show {
+  display: block;
+  position: absolute;
+  color: hsl(4, 100%, 67%);
+  font-weight: 700;
+  right: 1rem;
+}
+
+/* success message styles */
+.success {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60vh;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+.success > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+@media screen and (min-width: 26.5rem) {
+  .success {
+    height: fit-content;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0;
+    gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .success {
+    width: 28rem;
+    margin-right: 1.25rem;
+    text-wrap-style: pretty;
+  }
+}
+.success__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.success button:hover {
+  background: linear-gradient(to right, #ff5474, #ff693e);
+  box-shadow: 0 5px 20px #ff5474;
+}
+.success--show {
+  display: flex;
+  padding: 1.25rem;
+}
+
+/* attribution styles */
+.attribution {
+  position: absolute;
+  bottom: 1.25rem;
+  text-align: center;
+  color: hsl(234, 29%, 20%);
+}
+@media screen and (min-width: 26.5rem) {
+  .attribution {
+    color: hsl(0, 0%, 100%);
+  }
+}
+.attribution a:visited {
+  text-decoration-color: hsl(4, 100%, 67%);
+}
+.attribution a:hover {
+  color: hsl(4, 100%, 67%);
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap; /* Prevent line breaks */
+}/*# sourceMappingURL=main.css.map */

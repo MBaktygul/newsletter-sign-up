@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Newsletter sign-up page</h1>
+      <div class="newsletter__wrapper">
+        <img class="newsletter__image-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="abstract image of a screen and a browser">
+        <img class="newsletter__image-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="abstract image of a screen and a browser">
+        <div class="newsletter__content">
+          <h2>Stay updated!</h2>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>
+              <i aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64">
+                  <defs>
+                    <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient>
+                  </defs>
+                  <g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g>
+                </svg>
+              </i>
+              <p>Product discovery and building what matters</p>
+            </li>
+            <li>
+              <i aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64">
+                  <defs>
+                    <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient>
+                  </defs>
+                  <g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g>
+                </svg>
+              </i>
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li>
+              <i aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64">
+                  <defs>
+                    <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient>
+                  </defs>
+                  <g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g>
+                </svg>
+              </i>
+              <p>And much more!</p>
+            </li>
+          </ul>
+          <form class="newsletter__subscribe-content" id="form" action="/index.html" method="post" novalidate>
+            <div class="newsletter__subscribe-title">
+              <label for="email" style="font-weight:bold;">Email address</label>
+              <input class="email-input" type="email" id="email"  name="email"  placeholder="email@company.com" required >
+              <small class="email-error-message" aria-live="polite" id="email-error">Valid email required with @</small>
+            </div>
+            <button type="submit" class="button newsletter__subscribe-button" id="submit-button"> Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="success">
+        <!-- Success message -->
+        <div class="success__content">
+          <i aria-hidden="true">
+            <svg id="a" data-name="Layer 1" width="60" height="60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+              <defs>
+                <linearGradient id="b" x1="-596.52" y1="537.52" x2="-597.52" y2="536.52" gradientTransform="translate(38241 34401) scale(64 -64)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#ff6a3a"/>
+                  <stop offset="1" stop-color="#ff527b"/>
+                </linearGradient>
+              </defs>
+              <circle cx="32" cy="32" r="32" style="fill: url(#b);"/>
+              <path d="M18.29,34.69l8.33,7.98,19.09-18.28" style="fill: none; stroke: #fff; stroke-width: 4px;"/>
+            </svg>
+          </i>
+          <h2>Thanks for subscribing!</h2>
+          <p>A confirmation email has been sent to <b>
+              <span>ash@loremcompany.com. </span></b>Please open it and click the button inside to confirm your subscription.</p>
+
+          <!-- error message -->
+        </div>
+        <button class="button dismiss-button" id="dismiss-btn">Dismiss message</button>
+      </div>
+    </main>
+    <footer class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor</a>
+      </p>
+      <p>Coded by <a href="https://github.com/MBaktygul" target="_blank">Baktygul</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

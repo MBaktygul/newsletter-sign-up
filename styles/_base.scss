@@ -1,0 +1,54 @@
+// base
+body {
+	font-family: $font-stack;
+	font-size: $font-size-base;
+	color: $blue-800;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	line-height: $line-height;
+
+	@media screen and (min-width: 26.5rem) {
+		background-color: $blue-800;
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $white;
+	max-width: 26.5rem;
+	width: 100%;
+
+	@media screen and (min-width: 26.5rem) {
+		border-radius: 1.25rem;
+	}
+
+	@media screen and (min-width: 64rem) {
+		width: 100%;
+		flex-direction: row;
+		max-width: fit-content;
+		padding: 1.25rem;
+	}
+}
+
+h1,
+h2 {
+	font-size: clamp(36px, 5vw, 48px);
+}
+
+button {
+	border-width: 0;
+	padding: 1.25rem;
+	border-radius: 0.6rem;
+	color: $white;
+	background-color: $blue-800;
+	transition: transform 0.5s ease-in-out;
+
+	@media screen and (min-width: 64rem) {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,174 @@
+/* newsletter styles */
+
+.newsletter__wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (min-width: 64rem) {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&--hide {
+		display: none;
+	}
+}
+
+.newsletter__image-mobile {
+	@media screen and (min-width: 26.5rem) {
+		border-radius: 1.25rem;
+		width: 100%;
+	}
+
+	@media screen and (min-width: 64rem) {
+		display: none;
+	}
+}
+
+.newsletter__image-desktop {
+	display: none;
+
+	@media screen and (min-width: 64rem) {
+		display: block;
+		border-radius: 1.25rem;
+		width: 100%;
+		max-width: 400px;
+		order: 2;
+	}
+}
+
+.newsletter__content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	padding: 1.25rem;
+
+	> ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+
+	@media screen and (min-width: 64rem) {
+		width: 28rem;
+		margin-right: 1.25rem;
+		text-wrap-style: pretty;
+	}
+}
+
+.newsletter__content ul {
+	margin-bottom: 1.25rem;
+}
+
+.newsletter__content ul li {
+	display: flex;
+	gap: 0.6rem;
+}
+
+.newsletter__subscribe-content {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.newsletter__subscribe-title {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+// email styles
+
+.email-input {
+	border: 1px solid $gray;
+	padding: 1.25rem;
+	border-radius: 0.6rem;
+
+	&--show {
+		border: 1px solid $red;
+		padding: 1.25rem;
+		border-radius: 0.6rem;
+	}
+}
+
+.email-error-message {
+	display: none;
+
+	&--show {
+		display: block;
+		position: absolute;
+		color: $red;
+		font-weight: $font-weight-bold;
+		right: 1rem;
+	}
+}
+
+/* success message styles */
+
+.success {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 60vh;
+	gap: 1.25rem;
+	padding: 1.25rem;
+
+	> ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+
+	@media screen and (min-width: 26.5rem) {
+		height: fit-content;
+		width: 100%;
+		max-width: 30rem;
+		margin: 0;
+		gap: 2.5rem;
+	}
+
+	@media screen and (min-width: 64rem) {
+		width: 28rem;
+		margin-right: 1.25rem;
+		text-wrap-style: pretty;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	& button:hover {
+		background: linear-gradient(to right, #ff5474, #ff693e);
+		box-shadow: 0 5px 20px #ff5474;
+	}
+
+	&--show {
+		display: flex;
+		padding: 1.25rem;
+	}
+}
+
+/* attribution styles */
+
+.attribution {
+	position: absolute;
+	bottom: 1.25rem;
+	text-align: center;
+	color: $blue-800;
+
+	@media screen and (min-width: 26.5rem) {
+		color: $white;
+	}
+
+	a:visited {
+		text-decoration-color: $red;
+	}
+
+	a:hover {
+		color: $red;
+		text-decoration: underline;
+	}
+}
