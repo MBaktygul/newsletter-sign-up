@@ -98,7 +98,7 @@ select {
 }
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   color: hsl(234, 29%, 20%);
   display: flex;
   flex-direction: column;
@@ -152,6 +152,10 @@ button {
   button {
     cursor: pointer;
   }
+}
+button:hover {
+  background: linear-gradient(to right, #ff5474, #ff693e);
+  box-shadow: 0 5px 20px #ff5474;
 }
 
 /* newsletter styles */
@@ -292,10 +296,6 @@ button {
   flex-direction: column;
   gap: 1.25rem;
 }
-.success button:hover {
-  background: linear-gradient(to right, #ff5474, #ff693e);
-  box-shadow: 0 5px 20px #ff5474;
-}
 .success--show {
   display: flex;
   padding: 1.25rem;
@@ -312,6 +312,9 @@ button {
   .attribution {
     color: hsl(0, 0%, 100%);
   }
+}
+.attribution a {
+  color: hsl(4, 100%, 67%);
 }
 .attribution a:visited {
   text-decoration-color: hsl(4, 100%, 67%);

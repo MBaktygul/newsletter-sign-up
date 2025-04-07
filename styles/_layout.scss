@@ -140,11 +140,6 @@
 		gap: 1.25rem;
 	}
 
-	& button:hover {
-		background: linear-gradient(to right, #ff5474, #ff693e);
-		box-shadow: 0 5px 20px #ff5474;
-	}
-
 	&--show {
 		display: flex;
 		padding: 1.25rem;
@@ -161,6 +156,10 @@
 
 	@media screen and (min-width: 26.5rem) {
 		color: $white;
+	}
+
+	a {
+		color: $red;
 	}
 
 	a:visited {
